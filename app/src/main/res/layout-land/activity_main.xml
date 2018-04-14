@@ -8,11 +8,11 @@
     tools:context=".MainActivity">
 
     <fragment
+        android:id="@+id/fragment_network_list"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:name="com.example.carlos.socialnetwork.NetworkList"
-        android:id="@+id/fragment_network_list"
         tools:layout="@layout/fragment_network_list"/>
     <LinearLayout
         android:id="@+id/viewer"
