@@ -8,7 +8,9 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Network> list_networks;
+    private ArrayList<String> list_name_networks;
     private Network network;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,16 @@ public class MainActivity extends AppCompatActivity {
 
         network = new Network();
         list_networks = new ArrayList<Network>();
+        list_name_networks = new ArrayList<>();
+        fillNetworks();
+        fillListNetworks();
+    }
+
+    public void fillListNetworks(){
+        list_name_networks.add("Facebook");
+        list_name_networks.add("Youtube");
+        list_name_networks.add("Twitter");
+
     }
 
     public void fillNetworks(){
@@ -35,4 +47,17 @@ public class MainActivity extends AppCompatActivity {
         network.setImagen("@drawable/ic_twitter_material_circle");
         list_networks.add(network);
     }
+
+
+    public ArrayList<Network> getList_networks() {
+
+        return list_networks;
+
+    }
+
+    public ArrayList<String> getList_name_networks() {
+
+        return list_name_networks;
+    }
+
 }
