@@ -13,6 +13,7 @@ public class Network {
     private ArrayList<Network> listNetworks;
 
 
+
     public Network() {
         this.listNameNetworks = new ArrayList<>();
         this.listNetworks = new ArrayList<>();
@@ -22,23 +23,19 @@ public class Network {
         this.listNameNetworks.add("Youtube");
         this.listNameNetworks.add("Twitter");
 
-        this.imagen ="ic_facebook_material_circle";
-        this.nombre = "Facebook";
-        this.descripcion = "Facebook es un sitio web de redes sociales creado por Mark Zuckerberg y fundado junto a Eduardo Saverin, Chris Hughes y Dustin Moskovitz. ";
-        this.listNetworks.add(this);
-
-        this.imagen ="ic_youtubematerial_circle";
-        this.nombre = "Youtube";
-        this.descripcion = "Facebook es un sitio web de redes sociales creado por Mark Zuckerberg y fundado junto a Eduardo Saverin, Chris Hughes y Dustin Moskovitz. ";
-        this.listNetworks.add(this);
-
-        this.imagen ="ic_twitter_material_circle";
-        this.nombre = "Twitter";
-        this.descripcion = "Facebook es un sitio web de redes sociales creado por Mark Zuckerberg y fundado junto a Eduardo Saverin, Chris Hughes y Dustin Moskovitz. ";
-        this.listNetworks.add(this);
-
     }
 
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
 
     public String getImagen() {
         return imagen;

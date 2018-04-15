@@ -37,9 +37,9 @@ public class Main2Activity extends AppCompatActivity {
 
     /*Verificar lo obtenido*/
     private void handdleRecivedText(Intent intent){
-        String srcImage = intent.getStringExtra("IMAGE");
-        String name = intent.getStringExtra("TITLE");
-        String description = intent.getStringExtra("DESCRIPTION");
+        String srcImage = intent.getStringExtra("IMAGE_P");
+        String name = intent.getStringExtra("TITLE_P");
+        String description = intent.getStringExtra("DESCRIPTION_P");
 
         Log.d("REQUEST",srcImage);
 
