@@ -22,17 +22,17 @@ public class Network {
         this.listNameNetworks.add("Youtube");
         this.listNameNetworks.add("Twitter");
 
-        this.imagen ="@drawable/ic_facebook_material_circle";
+        this.imagen ="ic_facebook_material_circle";
         this.nombre = "Facebook";
         this.descripcion = "Facebook es un sitio web de redes sociales creado por Mark Zuckerberg y fundado junto a Eduardo Saverin, Chris Hughes y Dustin Moskovitz. ";
         this.listNetworks.add(this);
 
-        this.imagen ="@drawable/ic_youtubematerial_circle";
+        this.imagen ="ic_youtubematerial_circle";
         this.nombre = "Youtube";
         this.descripcion = "Facebook es un sitio web de redes sociales creado por Mark Zuckerberg y fundado junto a Eduardo Saverin, Chris Hughes y Dustin Moskovitz. ";
         this.listNetworks.add(this);
 
-        this.imagen ="@drawable/ic_twitter_material_circle";
+        this.imagen ="ic_twitter_material_circle";
         this.nombre = "Twitter";
         this.descripcion = "Facebook es un sitio web de redes sociales creado por Mark Zuckerberg y fundado junto a Eduardo Saverin, Chris Hughes y Dustin Moskovitz. ";
         this.listNetworks.add(this);

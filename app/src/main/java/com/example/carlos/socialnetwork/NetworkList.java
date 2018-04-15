@@ -18,8 +18,7 @@ import java.util.ArrayList;
 
 public class NetworkList extends ListFragment implements AdapterView.OnItemClickListener {
 
-    Network network;
-    //ListView listView;
+    Network network = new Network();
     ArrayList<Network> networkListObejct = new ArrayList<>();
 
     @Override
@@ -32,8 +31,6 @@ public class NetworkList extends ListFragment implements AdapterView.OnItemClick
     @Override
     public void onActivityCreated( Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        /*Aqui se encuentra el error -comprobado-*/
-        network = new Network();
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),android.R.layout.simple_list_item_1,network.getListNameNetworks());
 
         setListAdapter(adapter);
@@ -47,11 +44,11 @@ public class NetworkList extends ListFragment implements AdapterView.OnItemClick
             intent.setAction(Intent.ACTION_SEND);
             intent.setType("text/plain");
             Bundle bundle = new Bundle();
-            for (int i =0; i<networkListObejct.size();i++){
-                bundle.putString("IMAGE",networkListObejct.get(i).getImagen());
-                bundle.putString("TITLE",networkListObejct.get(i).getNombre());
-                bundle.putString("DESCRIPTION",networkListObejct.get(i).getDescripcion());
-            }
+            /*Error logico*/
+            bundle.putString("IMAGE",networkListObejct.get(position).getImagen());
+            bundle.putString("TITLE",networkListObejct.get(position).getNombre());
+            bundle.putString("DESCRIPTION",networkListObejct.get(position).getDescripcion());
+
             intent.putExtras(bundle);
             startActivity(intent);
 
