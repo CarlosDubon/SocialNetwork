@@ -3,6 +3,8 @@ package com.example.carlos.socialnetwork;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -62,13 +64,26 @@ public class NetworkList extends ListFragment implements AdapterView.OnItemClick
             intent.setAction(Intent.ACTION_SEND);
             intent.setType("text/plain");
             Bundle bundle = new Bundle();
-            /*Error logico*/
             bundle.putString("IMAGE_P",networkListObejct.get(position).getImagen());
             bundle.putString("TITLE_P",networkListObejct.get(position).getNombre());
             bundle.putString("DESCRIPTION_P",networkListObejct.get(position).getDescripcion());
 
             intent.putExtras(bundle);
             startActivity(intent);
+
+        }else if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+            Bundle bundleLand = new Bundle();
+            bundleLand.putString("IMAGE_L",networkListObejct.get(position).getImagen());
+            bundleLand.putString("TITLE_L",networkListObejct.get(position).getNombre());
+            bundleLand.putString("DESCRIPTION_L",networkListObejct.get(position).getDescripcion());
+            FragmentViewer fragmentViewer = new FragmentViewer();
+            fragmentViewer.setArguments(bundleLand);
+
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+            fragmentTransaction.replace(R.id.viewer,fragmentViewer);
+            fragmentTransaction.commit();
 
         }
     }
